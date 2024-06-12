@@ -1,6 +1,12 @@
 import React from 'react'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
+
+export const metadata: Metadata = {
+	title: "Repiyann's About",
+	description: "Muhamad Repiyan's personal info"
+}
 
 export default function page() {
 	return (

@@ -1,7 +1,13 @@
 import React from 'react'
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Github, ExternalLink } from 'lucide-react'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
+
+export const metadata: Metadata = {
+	title: "Repiyann's Portfolio",
+	description: "Muhamad Repiyan's personal portfolio"
+}
 
 export default function Portfolio() {
 	return (
