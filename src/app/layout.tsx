@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<body className={roboto.className}>
+			<body className={`${roboto.className} dark:bg-[#121212] bg-white`}>
 				<ThemeProvider
 					attribute="class"
 					defaultTheme="dark"

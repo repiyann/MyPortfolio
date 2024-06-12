@@ -4,8 +4,9 @@ import React, { useEffect, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { useTheme } from 'next-themes'
-import { Sun, Moon } from 'lucide-react'
+import { Sun, Moon, Menu } from 'lucide-react'
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet'
 
 export default function Navbar() {
 	const { setTheme } = useTheme()
@@ -30,13 +31,13 @@ export default function Navbar() {
 
 	return (
 		<header
-			className={`py-5 flex items-center sticky dark:bg-[#121212] bg-[#ffffff] top-0 z-50 justify-between ${
+			className={`px-1 py-4 md:px-16 md:py-2 lg:py-5 flex items-center sticky dark:bg-[#121212] bg-[#ffffff] top-0 z-50 justify-between ${
 				float
-					? 'm-10 top-5 px-[248px] shadow-lg dark:shadow-dark-lg rounded-xl transition-all duration-300'
-					: 'px-72 transition-all duration-300'
+					? 'lg:m-10 lg:top-5 lg:px-[248px] shadow-lg dark:shadow-dark-lg rounded-xl transition-all duration-300'
+					: 'lg:px-72 transition-all duration-300'
 			}`}
 		>
-			<h1>
+			<h1 className="hidden md:block md:mx-2">
 				<Link
 					className="font-semibold dark:text-white"
 					href="/"
@@ -44,6 +45,50 @@ export default function Navbar() {
 					Repiyann
 				</Link>
 			</h1>
+			<div className="flex items-center mx-3 md:hidden">
+				<Sheet>
+					<SheetTrigger>
+						<Menu className="dark:text-white" />
+					</SheetTrigger>
+					<SheetContent>
+						<SheetHeader>
+							<SheetTitle>Repiyann</SheetTitle>
+							<SheetDescription>
+								<Link
+									href={'/'}
+									className={`text-base ${activePage === 'home' ? 'text-[#264480]' : 'dark:text-white'}`}
+								>
+									Home
+								</Link>
+							</SheetDescription>
+							<SheetDescription>
+								<Link
+									href={'/portfolio'}
+									className={`text-base ${activePage === 'portfolio' ? 'text-[#264480]' : 'dark:text-white'}`}
+								>
+									Portfolio
+								</Link>
+							</SheetDescription>
+							<SheetDescription>
+								<Link
+									href={'/about'}
+									className={`text-base ${activePage === 'about' ? 'text-[#264480]' : 'dark:text-white'}`}
+								>
+									About
+								</Link>
+							</SheetDescription>
+							<SheetDescription>
+								<Link
+									href={'/contact'}
+									className={`text-base ${activePage === 'contact' ? 'text-[#264480]' : 'dark:text-white'}`}
+								>
+									Contact
+								</Link>
+							</SheetDescription>
+						</SheetHeader>
+					</SheetContent>
+				</Sheet>
+			</div>
 			<nav>
 				<ul className="hidden md:flex md:justify-between md:relative gap-2">
 					<li>
