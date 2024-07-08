@@ -57,7 +57,7 @@ export default function page() {
 						<AccordionTrigger className="dark:text-white pl-7">SMAN 1 Sindang Indramayu</AccordionTrigger>
 						<AccordionContent className="dark:text-white">
 							<p className="text-gray-500 pl-7">2018 - 2021</p>
-							<p className="pl-7">Majored in Mathematics and Natural Sciences</p>
+							<p className="pl-7">Majored in Math and Sciences</p>
 						</AccordionContent>
 					</AccordionItem>
 				</Accordion>
