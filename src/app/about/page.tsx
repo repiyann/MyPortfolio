@@ -66,7 +66,7 @@ export default function page() {
 				You could also see{' '}
 				<a
 					className="font-bold"
-					href="https://drive.google.com/file/d/1S6pTF8wjiRCFv3UwWu1sX7JZDs98rlYv/view"
+					href="https://drive.google.com/file/d/1xhTlFUmegWyrhGeAfmYpEPgL_jusIs3e/view?usp=sharing"
 					target="_blank"
 				>
 					my resume here
