@@ -13,6 +13,7 @@ export default function Navbar() {
 	const pathname = usePathname()
 	const [float, setFloat] = useState<boolean>(false)
 	const [activePage, setActivePage] = useState<string>('')
+	const [isSheetOpen, setIsSheetOpen] = useState<boolean>(false)
 
 	useEffect(() => {
 		function handleScroll(): void {
@@ -28,6 +29,10 @@ export default function Navbar() {
 			document.removeEventListener('scroll', handleScroll)
 		}
 	}, [pathname, float])
+
+	const closeSheet = () => {
+		setIsSheetOpen(false)
+	}
 
 	return (
 		<header
@@ -46,7 +51,7 @@ export default function Navbar() {
 				</Link>
 			</h1>
 			<div className="flex items-center mx-3 md:hidden">
-				<Sheet>
+				<Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
 					<SheetTrigger>
 						<Menu className="dark:text-white" />
 					</SheetTrigger>
@@ -56,7 +61,8 @@ export default function Navbar() {
 							<SheetDescription>
 								<Link
 									href={'/'}
-									className={`text-base ${activePage === 'home' ? 'text-[#264480]' : 'dark:text-white'}`}
+									onClick={closeSheet}
+									className={`text-base ${activePage === '/' ? 'text-[#264480]' : 'dark:text-white'}`}
 								>
 									Home
 								</Link>
@@ -64,7 +70,8 @@ export default function Navbar() {
 							<SheetDescription>
 								<Link
 									href={'/portfolio'}
-									className={`text-base ${activePage === 'portfolio' ? 'text-[#264480]' : 'dark:text-white'}`}
+									onClick={closeSheet}
+									className={`text-base ${activePage === '/portfolio' ? 'text-[#264480]' : 'dark:text-white'}`}
 								>
 									Portfolio
 								</Link>
@@ -72,7 +79,8 @@ export default function Navbar() {
 							<SheetDescription>
 								<Link
 									href={'/about'}
-									className={`text-base ${activePage === 'about' ? 'text-[#264480]' : 'dark:text-white'}`}
+									onClick={closeSheet}
+									className={`text-base ${activePage === '/about' ? 'text-[#264480]' : 'dark:text-white'}`}
 								>
 									About
 								</Link>
@@ -80,7 +88,8 @@ export default function Navbar() {
 							<SheetDescription>
 								<Link
 									href={'/contact'}
-									className={`text-base ${activePage === 'contact' ? 'text-[#264480]' : 'dark:text-white'}`}
+									onClick={closeSheet}
+									className={`text-base ${activePage === '/contact' ? 'text-[#264480]' : 'dark:text-white'}`}
 								>
 									Contact
 								</Link>
