@@ -143,6 +143,16 @@ export default function Portfolio() {
 					</Card>
 				</div>
 			</div>
+			<p className="mt-5 dark:text-white">
+				You could also see{' '}
+				<a
+					className="font-bold"
+					href="https://github.com/repiyann"
+					target="_blank"
+				>
+					other projects here
+				</a>
+			</p>
 		</div>
 	)
 }
