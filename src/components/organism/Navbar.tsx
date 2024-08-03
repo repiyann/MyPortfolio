@@ -42,7 +42,7 @@ export default function Navbar() {
 					: 'lg:px-72 transition-all duration-300'
 			}`}
 		>
-			<h1 className="hidden md:block md:mx-2">
+			<h1 className="hidden text-lg md:block md:mx-2">
 				<Link
 					className="font-semibold dark:text-white"
 					href="/"
@@ -52,17 +52,17 @@ export default function Navbar() {
 			</h1>
 			<div className="flex items-center mx-3 md:hidden">
 				<Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
-					<SheetTrigger>
+					<SheetTrigger aria-label='Open Sheet'>
 						<Menu className="dark:text-white" />
 					</SheetTrigger>
 					<SheetContent>
 						<SheetHeader>
-							<SheetTitle>Repiyann</SheetTitle>
+							<SheetTitle className='text-2xl pb-3'>Repiyann</SheetTitle>
 							<SheetDescription>
 								<Link
 									href={'/'}
 									onClick={closeSheet}
-									className={`text-base ${activePage === '/' ? 'text-[#264480]' : 'dark:text-white'}`}
+									className={`text-lg font-semibold ${activePage === '/' ? 'text-[#264480] dark:text-[#839FD8]' : 'dark:text-white'}`}
 								>
 									Home
 								</Link>
@@ -71,7 +71,7 @@ export default function Navbar() {
 								<Link
 									href={'/portfolio'}
 									onClick={closeSheet}
-									className={`text-base ${activePage === '/portfolio' ? 'text-[#264480]' : 'dark:text-white'}`}
+									className={`text-lg font-semibold ${activePage === '/portfolio' ? 'text-[#264480] dark:text-[#839FD8]' : 'dark:text-white'}`}
 								>
 									Portfolio
 								</Link>
@@ -80,7 +80,7 @@ export default function Navbar() {
 								<Link
 									href={'/about'}
 									onClick={closeSheet}
-									className={`text-base ${activePage === '/about' ? 'text-[#264480]' : 'dark:text-white'}`}
+									className={`text-lg font-semibold ${activePage === '/about' ? 'text-[#264480] dark:text-[#839FD8]' : 'dark:text-white'}`}
 								>
 									About
 								</Link>
@@ -89,7 +89,7 @@ export default function Navbar() {
 								<Link
 									href={'/contact'}
 									onClick={closeSheet}
-									className={`text-base ${activePage === '/contact' ? 'text-[#264480]' : 'dark:text-white'}`}
+									className={`text-lg font-semibold ${activePage === '/contact' ? 'text-[#264480] dark:text-[#839FD8]' : 'dark:text-white'}`}
 								>
 									Contact
 								</Link>
@@ -99,12 +99,12 @@ export default function Navbar() {
 				</Sheet>
 			</div>
 			<nav>
-				<ul className="hidden md:flex md:justify-between md:relative gap-2">
+				<ul className="hidden text-lg md:flex md:justify-between md:relative gap-2">
 					<li>
 						<Link
 							className={`font-semibold px-2 py-1 ${
 								activePage === '/'
-									? 'text-[#264480] hover:bg-[#dde6fa] dark:hover:bg-[#1b1c1f] hover:rounded-md'
+									? 'text-[#264480] dark:text-[#839FD8] hover:bg-[#dde6fa] dark:hover:bg-[#1b1c1f] hover:rounded-md'
 									: 'dark:text-white hover:bg-[#dde6fa] dark:hover:bg-[#1b1c1f] hover:rounded-md'
 							}`}
 							href="/"
@@ -116,7 +116,7 @@ export default function Navbar() {
 						<Link
 							className={`font-semibold px-2 py-1 ${
 								activePage === '/portfolio'
-									? 'text-[#264480] hover:bg-[#dde6fa] dark:hover:bg-[#1b1c1f] hover:rounded-md'
+									? 'text-[#264480] dark:text-[#839FD8] hover:bg-[#dde6fa] dark:hover:bg-[#1b1c1f] hover:rounded-md'
 									: 'dark:text-white hover:bg-[#dde6fa] dark:hover:bg-[#1b1c1f] hover:rounded-md'
 							}`}
 							href="/portfolio"
@@ -128,7 +128,7 @@ export default function Navbar() {
 						<Link
 							className={`font-semibold px-2 py-1 ${
 								activePage === '/about'
-									? 'text-[#264480] hover:bg-[#dde6fa] dark:hover:bg-[#1b1c1f] hover:rounded-md'
+									? 'text-[#264480] dark:text-[#839FD8] hover:bg-[#dde6fa] dark:hover:bg-[#1b1c1f] hover:rounded-md'
 									: 'dark:text-white hover:bg-[#dde6fa] dark:hover:bg-[#1b1c1f] hover:rounded-md'
 							}`}
 							href="/about"
@@ -140,7 +140,7 @@ export default function Navbar() {
 						<Link
 							className={`font-semibold px-2 py-1 ${
 								activePage === '/contact'
-									? 'text-[#264480] hover:bg-[#dde6fa] dark:hover:bg-[#1b1c1f] hover:rounded-md'
+									? 'text-[#264480] dark:text-[#839FD8] hover:bg-[#dde6fa] dark:hover:bg-[#1b1c1f] hover:rounded-md'
 									: 'dark:text-white hover:bg-[#dde6fa] dark:hover:bg-[#1b1c1f] hover:rounded-md'
 							}`}
 							href="/contact"
@@ -151,7 +151,7 @@ export default function Navbar() {
 				</ul>
 			</nav>
 			<DropdownMenu>
-				<DropdownMenuTrigger className="dark:text-white px-2 py-1 hover:bg-[#dde6fa] dark:hover:bg-[#1b1c1f] hover:rounded-md">
+				<DropdownMenuTrigger aria-label='Open Theme Dropdown' className="dark:text-white px-2 py-1 hover:bg-[#dde6fa] dark:hover:bg-[#1b1c1f] hover:rounded-md">
 					<Moon className="dark:block hidden" />
 					<Sun className="block dark:hidden" />
 				</DropdownMenuTrigger>

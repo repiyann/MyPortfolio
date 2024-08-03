@@ -14,7 +14,7 @@ export default function page() {
 			<div className="mt-5 flex flex-col-reverse items-center justify-between md:flex-row">
 				<div>
 					<h1 className="text-4xl font-bold dark:text-white"> About Me </h1>
-					<h2 className="text-2xl font-semibold text-[#264480] mt-2"> Muhamad Repiyan Riski </h2>
+					<h2 className="text-2xl font-semibold text-[#264480] dark:text-[#839FD8] mt-2"> Muhamad Repiyan Riski </h2>
 					<br />
 					<p className="dark:text-white">
 						My name is <b>Muhamad Repiyan Riski</b>, or you could call me <b>Ian</b> for short. I&apos;m an active
@@ -40,20 +40,27 @@ export default function page() {
 			<div className="mt-4">
 				<Accordion type="multiple">
 					<AccordionItem value="item-1">
+						<AccordionTrigger className="dark:text-white pl-7">Freelance</AccordionTrigger>
+						<AccordionContent className="dark:text-white">
+							<p className="text-gray-500 pl-7">Jun 2024 - Jul 2024</p>
+							<p className="pl-7">Frontend Developer Freelance</p>
+						</AccordionContent>
+					</AccordionItem>
+					<AccordionItem value="item-2">
 						<AccordionTrigger className="dark:text-white pl-7">Infinite Learning Indonesia</AccordionTrigger>
 						<AccordionContent className="dark:text-white">
 							<p className="text-gray-500 pl-7">Feb 2024 - Jul 2024</p>
 							<p className="pl-7">Study Independent Kampus Merdeka Batch 6</p>
 						</AccordionContent>
 					</AccordionItem>
-					<AccordionItem value="item-2">
+					<AccordionItem value="item-3">
 						<AccordionTrigger className="dark:text-white pl-7">Indonesia Computer University</AccordionTrigger>
 						<AccordionContent className="dark:text-white">
 							<p className="text-gray-500 pl-7">2021 - Present</p>
 							<p className="pl-7">Majored in Computer Science</p>
 						</AccordionContent>
 					</AccordionItem>
-					<AccordionItem value="item-3">
+					<AccordionItem value="item-4">
 						<AccordionTrigger className="dark:text-white pl-7">SMAN 1 Sindang Indramayu</AccordionTrigger>
 						<AccordionContent className="dark:text-white">
 							<p className="text-gray-500 pl-7">2018 - 2021</p>

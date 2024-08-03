@@ -8,7 +8,7 @@ export default function Home() {
 			<div className="col-start-1 col-end-1 m-auto text-center md:text-left">
 				<header>
 					<h1 className="text-[33px] font-bold dark:text-white">Muhamad Repiyan Riski</h1>
-					<h2 className="text-2xl font-medium text-[#264480]">Student & Full-Stack Developer</h2>
+					<h2 className="text-2xl font-medium text-[#264480] dark:text-[#839FD8]">Student & Full-Stack Developer</h2>
 				</header>
 				<p className="text-lg mt-3 dark:text-white">Welcome to my personal website</p>
 			</div>
