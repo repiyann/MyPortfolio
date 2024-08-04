@@ -42,7 +42,7 @@ export default function Navbar() {
 					: 'lg:px-72 transition-all duration-300'
 			}`}
 		>
-			<h1 className="hidden text-lg md:block md:mx-2">
+			<h1 className="hidden text-xl md:block md:mx-2">
 				<Link
 					className="font-semibold dark:text-white"
 					href="/"
