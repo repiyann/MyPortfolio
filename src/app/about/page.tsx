@@ -109,7 +109,7 @@ export default function page() {
 				You could also see{" "}
 				<a
 					className="font-bold"
-					href="https://drive.google.com/file/d/1xhTlFUmegWyrhGeAfmYpEPgL_jusIs3e/view?usp=sharing"
+					href="https://drive.google.com/file/d/1KsZ7UcWexch6dpnc8pzDC4_SIh3_uyL5/view?usp=sharing"
 					target="_blank"
 				>
 					my resume here
