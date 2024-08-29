@@ -1,10 +1,10 @@
-'use client'
+"use client"
 
-import * as React from 'react'
-import * as AccordionPrimitive from '@radix-ui/react-accordion'
-import { ChevronDown } from 'lucide-react'
+import * as React from "react"
+import * as AccordionPrimitive from "@radix-ui/react-accordion"
+import { ChevronDown } from "lucide-react"
 
-import { cn } from '@/lib/utils'
+import { cn } from "@/lib/utils"
 
 const Accordion = AccordionPrimitive.Root
 
@@ -20,17 +20,12 @@ const AccordionItem = React.forwardRef<
 		</div>
 		<AccordionPrimitive.Item
 			ref={ref}
-			className={cn(
-				'border-b',
-				'dark:border-white',
-				'border-black',
-				className
-			)}
+			className={cn("border-b", "dark:border-white", "border-black", className)}
 			{...props}
 		/>
 	</div>
 ))
-AccordionItem.displayName = 'AccordionItem'
+AccordionItem.displayName = "AccordionItem"
 
 const AccordionTrigger = React.forwardRef<
 	React.ElementRef<typeof AccordionPrimitive.Trigger>,
@@ -40,7 +35,7 @@ const AccordionTrigger = React.forwardRef<
 		<AccordionPrimitive.Trigger
 			ref={ref}
 			className={cn(
-				'flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180',
+				"flex flex-1 items-center justify-between py-4 font-medium transition-all hover:underline [&[data-state=open]>svg]:rotate-180",
 				className
 			)}
 			{...props}
@@ -52,21 +47,36 @@ const AccordionTrigger = React.forwardRef<
 ))
 AccordionTrigger.displayName = AccordionPrimitive.Trigger.displayName
 
+interface AccordionContentProps
+	extends React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content> {
+	"data-state"?: "open" | "closed"
+}
+
 const AccordionContent = React.forwardRef<
 	React.ElementRef<typeof AccordionPrimitive.Content>,
-	React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
->(({ className, children, ...props }, ref) => (
-	<AccordionPrimitive.Content
-		ref={ref}
-		className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
-		{...props}
-	>
-    <div className="px-[0.7rem]">
-			<div className="w-1 h-14 dark:bg-white bg-black absolute"></div>
-		</div>
-		<div className={cn('pb-4 pt-0', className)}>{children}</div>
-	</AccordionPrimitive.Content>
-))
+	AccordionContentProps
+>(({ className, children, ...props }, ref) => {
+	const { "data-state": dataState } = props
+
+	const dynamicLineClass =
+		dataState === "open" ? "line-compress" : "line-expand"
+
+	return (
+		<AccordionPrimitive.Content
+			ref={ref}
+			className={cn("overflow-hidden text-sm transition-all dura", {
+				"data-[state=closed]:animate-accordion-up": dataState === "closed",
+				"data-[state=open]:animate-accordion-down": dataState === "open"
+			})}
+			{...props}
+		>
+			<div className="px-[0.7rem]">
+				<div className={dynamicLineClass}></div>
+			</div>
+			<div className={cn("pb-4 pt-0", className)}>{children}</div>
+		</AccordionPrimitive.Content>
+	)
+})
 
 AccordionContent.displayName = AccordionPrimitive.Content.displayName
 

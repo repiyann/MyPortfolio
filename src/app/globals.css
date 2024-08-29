@@ -3,12 +3,11 @@
 @tailwind utilities;
 
 :root {
-	/* Your default theme */
 	--background: white;
 	--foreground: black;
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
 	--background: black;
 	--foreground: white;
 }
@@ -27,4 +26,48 @@
 	position: relative;
 	top: 15px;
 	left: -3px;
+}
+
+@keyframes lineExpand {
+	to {
+		height: 56px;
+	}
+}
+
+.line-expand {
+	width: 4px;
+	height: 14px;
+	background-color: black;
+	position: absolute;
+	animation: lineExpand 0.2s forwards;
+}
+
+.dark .line-expand {
+	width: 4px;
+	height: 14px;
+	background-color: white;
+	position: absolute;
+	animation: lineExpand 0.2s forwards;
+}
+
+@keyframes lineCompress {
+	to {
+		height: 14px;
+	}
+}
+
+.line-compress {
+	width: 4px;
+	height: 56px;
+	background-color: black;
+	position: absolute;
+	animation: lineCompress 0.2s forwards;
+}
+
+.dark .line-compress {
+	width: 4px;
+	height: 56px;
+	background-color: white;
+	position: absolute;
+	animation: lineCompress 0.2s forwards;
 }

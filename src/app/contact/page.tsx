@@ -11,7 +11,7 @@ export default function page() {
 	return (
 		<div className="px-5 py-2 md:px-20 lg:px-80 lg:pt-5 flex flex-col dark:bg-[#121212] bg-white">
 			<h1 className="text-4xl font-bold dark:text-white"> Contact Me </h1>
-			<p className="dark:text-white">
+			<p className="dark:text-white text-justify">
 				I&apos;m excited to connect with everyone so please don&apos;t hesitate
 				to get in touch with me by following my social media bellow:
 			</p>
