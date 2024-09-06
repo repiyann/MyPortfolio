@@ -102,43 +102,19 @@ export default function Portfolio() {
 					<Card className="h-[180px] mb-3 md:mb-0">
 						<CardHeader>
 							<CardTitle className="flex justify-between relative">
-								Freelance
+								Data Science
 								<div className="flex flex-row gap-5">
 									<Link
-										href="https://github.com/repiyann/freelance"
+										href="https://github.com/repiyann/Data-Science-UNIKOM"
 										target="_blank"
 									>
 										<Github className="hover:text-[#264480]" />
-									</Link>
-									<Link
-										href="https://freelance-lake.vercel.app/"
-										target="_blank"
-									>
-										<ExternalLink className="hover:text-[#264480]" />
 									</Link>
 								</div>
 							</CardTitle>
 						</CardHeader>
 						<CardContent>
-							<p>Freelance frontend website, created to fullfill mini project of MBKM</p>
-						</CardContent>
-					</Card>
-				</div>
-				<div className="col-start-2 col-end-2">
-					<Card className="h-[180px] mb-3 md:mb-0">
-						<CardHeader>
-							<CardTitle className="flex justify-between relative">
-								ReactJS - BookStore
-								<Link
-									href="https://github.com/repiyann/React-MySQL---BookStore"
-									target="_blank"
-								>
-									<Github className="hover:text-[#264480]" />
-								</Link>
-							</CardTitle>
-						</CardHeader>
-						<CardContent>
-							<p>Simple CRUD book store created using ReactJS, ExpressJS, and TailwindCSS</p>
+							<p>A list of data science tasks featuring image recognition and random number generation projects</p>
 						</CardContent>
 					</Card>
 				</div>
