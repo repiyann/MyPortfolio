@@ -1,4 +1,3 @@
-import type { Metadata } from "next"
 import { Roboto } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/mollecules/ThemeProvider"
@@ -9,11 +8,6 @@ import Loading from "@/components/mollecules/Loading"
 
 const roboto = Roboto({ weight: "400", subsets: ["latin"] })
 
-export const metadata: Metadata = {
-	title: "Repiyann's Portfolio",
-	description: "Muhamad Repiyan's personal portfolio"
-}
-
 export default function RootLayout({
 	children
 }: Readonly<{
@@ -21,7 +15,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<body className={`${roboto.className} dark:bg-[#121212] bg-white`}>
+			<body className={`${roboto.className} dark:bg-[#121212] min-h-screen bg-white`}>
 				<ThemeProvider
 					attribute="class"
 					defaultTheme="dark"

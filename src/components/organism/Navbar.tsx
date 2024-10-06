@@ -11,6 +11,7 @@ import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTr
 export default function Navbar() {
 	const { setTheme } = useTheme()
 	const pathname = usePathname()
+	
 	const [float, setFloat] = useState<boolean>(false)
 	const [activePage, setActivePage] = useState<string>('')
 	const [isSheetOpen, setIsSheetOpen] = useState<boolean>(false)

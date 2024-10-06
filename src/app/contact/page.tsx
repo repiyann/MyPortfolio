@@ -1,6 +1,6 @@
 import React from "react"
 import type { Metadata } from "next"
-import { Facebook, Github, Linkedin, Mail, Instagram } from "lucide-react"
+import { Github, Linkedin, Mail, Instagram } from "lucide-react"
 
 export const metadata: Metadata = {
 	title: "Repiyann's Contact",

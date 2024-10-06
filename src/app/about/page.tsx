@@ -13,15 +13,14 @@ export const metadata: Metadata = {
 	description: "Muhamad Repiyan's personal info"
 }
 
-export default function page() {
+export default function Page() {
 	return (
-		<div className="px-5 pt-2 pb-20 md:px-20 lg:px-80 lg:pt-5 flex flex-col dark:bg-[#121212] bg-white">
+		<div className="px-5 py-2 md:px-20 lg:px-80 lg:pt-5 flex flex-col dark:bg-[#121212] bg-white">
 			<div className="mt-5 flex flex-col-reverse items-center justify-between md:flex-row">
 				<div>
 					<h1 className="text-4xl font-bold dark:text-white"> About Me </h1>
 					<h2 className="text-2xl font-semibold text-[#264480] dark:text-[#839FD8] mt-2">
-						{" "}
-						Muhamad Repiyan Riski{" "}
+						Muhamad Repiyan Riski
 					</h2>
 					<br />
 					<p className="dark:text-white text-justify md:pr-10">
@@ -57,7 +56,7 @@ export default function page() {
 				education and more.
 			</p>
 			<div className="mt-4">
-				<Accordion type="multiple">
+				<Accordion>
 					<AccordionItem value="item-1">
 						<AccordionTrigger className="dark:text-white pl-7 font-semibold">
 							Sagara Mobile
