@@ -15,8 +15,12 @@ export default function Footer() {
 	console.log("Currently open accordion:", openAccordion)
 	return (
 		<footer
-			className={`dark:bg-[#121212] bg-white bottom-0 w-full ${
-				isAbout && isAccordionEmpty ? "md:fixed lg:mt-10 lg:fixed" : isAbout && isAccordionFirst ? "lg:fixed" : !isAbout && "lg:fixed"
+			className={`dark:bg-[#121212] bg-white lg:mt-40 bottom-0 w-full ${
+				isAbout && isAccordionEmpty
+					? "md:fixed lg:fixed"
+					: isAbout && isAccordionFirst
+					? "lg:fixed"
+					: !isAbout && "lg:fixed"
 			}`}
 		>
 			<p className="text-center dark:text-white">

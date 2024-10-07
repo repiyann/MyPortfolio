@@ -13,7 +13,9 @@ const Accordion = ({ children }: { children: React.ReactNode }) => {
 		<AccordionPrimitive.Root
 			type="multiple"
 			value={openAccordion}
-			onValueChange={(value) => setOpenAccordion(value === openAccordion ? undefined : value)} // Zustand setter
+			onValueChange={(value) =>
+				setOpenAccordion(value === openAccordion ? undefined : value)
+			}
 		>
 			{children}
 		</AccordionPrimitive.Root>
