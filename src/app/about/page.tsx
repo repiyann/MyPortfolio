@@ -99,7 +99,7 @@ export default function About() {
 				You could also see{' '}
 				<a
 					className="font-bold"
-					href="https://drive.google.com/file/d/1rUu7xzkQ1kisSwZ7G4caj8H8gBSbZ5dk/view?usp=sharing"
+					href="https://drive.google.com/file/d/1Lff7axAavcT3kngqTxXh5VLUY5z1AaqE/view?usp=sharing"
 					target="_blank"
 				>
 					my resume here
