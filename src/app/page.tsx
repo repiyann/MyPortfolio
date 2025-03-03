@@ -1,9 +1,9 @@
-import type { Metadata } from "next"
-import Image from "next/image"
+import type { Metadata } from 'next'
+import Image from 'next/image'
 
 export const metadata: Metadata = {
 	title: "Repiyann's Portfolio",
-	description: "Muhamad Repiyan's personal portfolio"
+	description: "Muhamad Repiyan's personal portfolio",
 }
 
 export default function Home() {
@@ -24,10 +24,10 @@ export default function Home() {
 			</div>
 			<div className="col-start-2 col-end-2 m-auto">
 				<Image
-					src={"/homeImage.png"}
+					src={'/homeImage.png'}
 					height={300}
 					width={300}
-					style={{ width: "auto", height: "auto" }}
+					style={{ width: 'auto', height: 'auto' }}
 					priority
 					alt="Home Image Ilustration"
 				/>

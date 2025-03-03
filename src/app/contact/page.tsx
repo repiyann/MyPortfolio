@@ -1,13 +1,12 @@
-import React from "react"
-import type { Metadata } from "next"
-import { Github, Linkedin, Mail, Instagram } from "lucide-react"
+import type { Metadata } from 'next'
+import { Github, Linkedin, Mail, Instagram } from 'lucide-react'
 
 export const metadata: Metadata = {
 	title: "Repiyann's Contact",
-	description: "Muhamad Repiyan's personal contact"
+	description: "Muhamad Repiyan's personal contact",
 }
 
-export default function page() {
+export default function Contact() {
 	return (
 		<div className="px-5 py-2 md:px-20 lg:px-80 lg:pt-5 flex flex-col dark:bg-[#121212] bg-white">
 			<h1 className="text-4xl font-bold dark:text-white"> Contact Me </h1>

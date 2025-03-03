@@ -1,4 +1,4 @@
-import { create } from "zustand"
+import { create } from 'zustand'
 
 interface AccordionState {
 	openAccordion: string[] | undefined
@@ -7,5 +7,5 @@ interface AccordionState {
 
 export const useAccordionStore = create<AccordionState>((set) => ({
 	openAccordion: undefined,
-	setOpenAccordion: (value) => set({ openAccordion: value })
+	setOpenAccordion: (value) => set({ openAccordion: value }),
 }))
